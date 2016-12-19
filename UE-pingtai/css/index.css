@@ -1,0 +1,399 @@
+/*reset css*/
+body{
+	margin: 0;
+	font: 12px "宋体";
+}
+h1,
+dd,
+h3,
+p{
+	margin: 0;
+}
+a{
+	text-decoration:none;
+}
+img{
+	border: none;
+	vertical-align: top;
+}
+ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+dl{
+	margin: 0;
+	padding: 0;
+}
+strong{
+	font-weight: normal;
+}
+/*end reset*/
+/*工具样式*/
+.wrap{
+	width: 1180px;
+	margin: 0 auto;
+}
+.fl{
+	float: left;
+}
+.clearfix{
+	zoom:1;
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.ico_more{
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border: 4px solid transparent;
+	border-top-color: #999a9b;
+	transform: rotate(0deg);
+	transition-duration: 1s;
+	transform-origin: 4px 2px;
+}
+ a:hover .ico_more{
+	transform: rotate(180deg);
+}
+.header1{
+	border-bottom: 1px solid #f0f1f1;
+}
+h3{
+	font: 20px/60px "宋体";
+	color: #6b6b6b;
+	padding:0 18px;
+}
+.header1 .more{
+	float: right;
+	display: block;
+	color: #6b6b6b;
+	line-height: 60px;
+	padding: 0 36px;
+	border-left: 1px solid #f0f1f1;
+}
+/*头部吊顶*/
+#head_box{
+	width: 100%;
+	background: #323436;
+}
+#head_box .head_top{
+	height: 50px;
+}
+#head_box .head_top .logo{
+	padding-right: 25px;
+}
+#head_box .head_top .head_nav{
+	line-height: 50px;
+}
+#head_box .head_nav a{
+	display: inline-block;
+	padding: 0 20px;
+	color: #758c81;
+	position: relative;
+}
+#head_box .head_nav .ico_more{
+	position: absolute;
+	right: 3px;
+	top: 24px;
+}
+#head_box a:hover{
+	color: #fff;
+	background: #454648;
+}
+#head_box a.hovers{
+	color: #fff;
+	background: #454648;
+}
+#head_box .head_nav .submenu{
+	display: none;
+	position:absolute;
+	background: #454648;
+	z-index: 1;
+}
+.head_nav .submenu dd{
+	height: 28px;
+	line-height: 28px;
+}
+#head_box .head_nav .submenu a:hover{
+	background: #6bc30d;
+}
+#head_box .login_reg{
+	float: right;
+	padding: 10px 0 8px 0;
+}
+#head_box .login_reg a{
+	color: #bdb297;
+	line-height: 32px;
+	padding: 0 20px;
+	background: #505050;
+}
+#head_box .login_reg .regin_btn{
+	color: #fff;
+	background:#6bc30d;
+}
+#head_box .login_reg a:hover{
+	color: #fff;
+}
+#head_box .login_reg .search{
+	display: block;
+	width: 42px;
+	height: 32px;
+	background: url(../img/search.png) no-repeat;
+}
+#head_box .select_nav{
+	display: none;
+	width: 56px;
+	height: 50px;
+	background: url(../img/select.png) no-repeat;
+}
+/*图片容器*/
+#banner{
+	background: url(../img/banner.jpg) no-repeat center 0;
+}
+#banner .banner_box{
+	padding-bottom: 45px;
+	text-align: center;
+}
+#banner .banner_box img{
+	width: 400px;
+	height: 125px;
+}
+#banner .banner_box .banner_nav{
+	height: 30px;
+	line-height: 30px;
+}
+#banner .banner_nav a{
+	display: inline-block;
+	color: #fff;
+	padding:0 18px;
+	background: #00b4de;
+}
+#banner .banner_nav span{
+	display: inline-block;
+	color: #7a92a0;
+	padding: 0 18px;
+	background: #486d7f;
+}
+/*sbar_nav*/
+#type{
+	box-shadow: 0 3px 5px #e2e2e2; 
+	padding: 10px 0;
+	background: #f7f8f8;
+}
+#type .tyep_box a{
+	position: relative;
+	display: inline-block;
+	width: 124px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	color: #6b6b6b;
+	z-index: 1;
+}
+#type .tyep_box .a1{
+	background: #edeeee;
+	border: 1px solid #dadada;
+}
+#type .tyep_box i{
+	position: absolute;
+	left: 10px;
+	top: 11px;
+	width: 12px;
+	height: 16px;
+}
+.tyep_box .a2 i{
+	background: url(../img/zuixin.png) no-repeat;
+} 
+.tyep_box .a3 i{
+	background: url(../img/color.png) no-repeat;
+} 
+.tyep_box .a4 i{
+	background: url(../img/owner.png) no-repeat;
+} 
+#type .tyep_box dl{
+	position: absolute;
+	display: none;
+	background: #fff;
+	padding: 10px 0;
+	box-shadow:0 0 5px #e2e2e2
+	z-index:1;
+}
+#type .tyep_box li:hover dl{
+	display: block;
+}	
+.tyep_box dl a:hover{
+	color: #fff;
+	background:#6bc30d;
+}
+/*图片区域*/
+#pic_box{
+	padding-bottom: 40px;
+	background: #f1f1f1;
+}
+#pic_box .main{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 48px;
+}
+#pic_box .main div{
+	margin-bottom: 46px;
+}
+#pic_box .main .big_img{
+	width: 580px;
+	height: 270px;
+}
+#pic_box .main a{
+	display: block;
+	height: 270px;
+}
+#pic_box .main .s_img{
+	width: 280px;
+	height: 270px;
+}
+#pic_box .num_nav{
+	padding-bottom: 40px;
+}
+#pic_box .num_nav a{
+	display:inline-block;
+	width: 36px;
+	height: 36px;
+	color: #a9a9a9;
+	text-align: center;
+	line-height: 36px;
+	background: #fff;
+}
+#pic_box .num_nav .a2{
+	color: #fff;
+	background: #70ca10;
+}
+#pic_box .num_nav a:hover{
+	color: #fff;
+	background: #969696;
+}
+.referrer_box{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-bottom: 40px;
+}
+.referrer_box>div{
+	width: 580px;
+	background: #fff;
+}
+.referrer_box .stylist{
+	padding: 20px 20px 9px;
+}
+.referrer_box .stylist li{
+	width: 206px;
+	padding:0 0 24px 64px;
+	position: relative;
+}
+.referrer_box .stylist .pic{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 46px;
+	height: 46px;
+	background: url(../img/mrbeen.png) no-repeat;
+}
+.referrer_box .stylist p{
+	line-height: 20px;
+}
+.stylist p a{
+	color: #8b8b8b;
+}
+.stylist p strong{
+	display:inline-block;
+	padding-right: 10px;
+	color: #afafaf;
+}
+.referrer_box .stylist .li1{
+	width: 280px;
+	padding: 0;
+}
+.referrer_box .stylist .li2{
+	width: 230px;
+	padding:11px 0 0 19px;
+}
+.stylist .li2 p{
+	width: 230px;
+	color: #bfbfbf;
+	line-height: 26px;
+}
+.header1 .more1:hover{
+	color: #fff;
+	background: #969696;
+}
+.compny{
+	background: #fff;
+}
+.compny .compny_rec{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding:0 20px;
+}
+.compny .compny_rec img{
+	display: block;
+}
+#footer{
+	background: #222324;
+}
+#footer .footer_box {
+	position: relative;
+	padding:20px 0 18px;
+}
+#footer .footer_box .footer_nav{
+	line-height: 16px;
+	padding: 2px 0 10px;
+}
+#footer .footer_nav a{
+	color: #cecece;
+	line-height: 16px;
+	padding-right: 40px;
+}
+#footer p{
+	line-height: 22px;
+	padding-top: 10px;
+	color: #8e8e80;
+}
+#footer p a{
+	color: #70bf1d;
+}
+#footer .footer_nav span{
+	color: #8e8e73;
+}
+#footer .footer_nav .shangbiao{
+	float: right;
+	padding:0;
+	width: 74px;
+	height:30px;
+}
+@media only all and (max-width: 1251px){
+	#head_box .head_top .head_nav{
+		display: none;
+	}
+	#head_box .select_nav{
+		display: block;
+	}
+	.wrap{
+		width: 880px;
+	}
+	.referrer_box{
+		display: none;
+	}
+}
+@media only all and (max-width: 950px){
+	.wrap{
+		width: 580px;
+	}
+	#footer .footer_box_left{
+
+	}
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>clockMoudle</title>
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			canvas{
+				background: white;
+				border-radius: 106px;
+			}
+		</style>
+	</head>
+	<body>
+	    <canvas id="canvas" width="210px" height="210px" background="yellow"></canvas>
+	</body>
+	<script type="text/javascript">
+		//创建钟表原型
+		var Clock = function (props) {
+			//如果不存在cavas抛出一个错误
+			if ( props.canvas === undefined || props.canvas instanceof HTMLCanvasElement == false) {
+				throw new Error( 'the canvas is not defined' ) ;
+			}
+			this.canvas = props.canvas ;
+			this.cxt = this.canvas.getContext( '2d' ) ;
+			this.W = this.canvas.width ;
+			this.H = this.canvas.height ;
+			this.R = 100/*this.H*0.2*/ ;
+			return this ;
+		}
+		//初始化钟表
+		Clock.prototype.update = function() {
+			var _this = this ;
+			setInterval(function(){
+				var timer = new Date() ;		//获取最新时间
+				var s = timer.getSeconds() ;	//获取秒
+				var m = timer.getMinutes() + s/60 ;	//获取分
+				var h = timer.getHours() + m/60 ;	//获取小时
+				_this.cxt.clearRect( 0,0,_this.W,_this.H ) ;
+				_this.render( h,m,s ) ;
+			},200) ;
+		};
+		//渲染钟表函数，调用原型的各种方法渲染整个钟表
+		Clock.prototype.render = function(h,m,s) {
+			this.drawOuter() ;
+			this.drawNum() ;
+			this.drawPoint() ;
+			this.drawHours(h) ;
+			this.drawMins(m) ;
+			this.drawSecs(s) ;
+			this.drawCircle() ;
+		};
+		//在原型上添加drawOuter(描绘表框)方法
+		Clock.prototype.drawOuter = function() {
+			this.cxt.save() ;
+			this.cxt.translate(this.W/2,this.H/2) ;
+			this.cxt.lineWidth = 8;
+			this.cxt.strokeStyle ='#F99B21';
+			this.cxt.beginPath() ;
+			this.cxt.arc(0,0,this.R,0,2*Math.PI) ;
+			this.cxt.stroke() ;
+			this.cxt.restore() ;
+			return this ;
+		} ;
+		//添加描绘数字方法
+		Clock.prototype.drawNum = function() {
+			var _this = this ;
+			var num = [3,4,5,6,7,8,9,10,11,12,1,2] ;
+			this.cxt.save() ;
+			this.cxt.translate(this.W/2,this.H/2) ;
+			this.cxt.font = '18px Arial' ;
+			this.cxt.textAlign = 'center' ;
+			this.cxt.textBaseline = 'middle' ;
+			//循环数字数组渲染表盘
+			num.forEach((item,i)=>{
+				var angle = Math.PI / 6*i ;
+				var x = ( _this.R - 20 )*Math.cos( angle ) ;
+				var y = ( _this.R - 20 )*Math.sin( angle ) ;
+				_this.cxt.fillText( item,x,y );
+			});
+			this.cxt.restore() ;
+			return this;
+		}
+		//添加绘制秒点的方法
+		Clock.prototype.drawPoint = function() {
+			var r ;
+			this.cxt.save() ;
+			this.cxt.translate( this.W/2,this.H/2 ) ;
+			for( var i = 0; i<60; i++ ){
+				var angle = 2*Math.PI / 60*i ;
+				var x = (this.R - 8)*Math.cos(angle) ;
+				var y = (this.R - 8)*Math.sin(angle) ;
+				this.cxt.beginPath() ;
+				//判断圆点是不是整点时间，整点时间的圆点添加黑色
+				if( i%5 == 0 ){
+					r = 4;
+					this.cxt.fillStyle = '#75F012' ;
+				}else {
+					r = 2;
+					this.cxt.fillStyle = 'red' ;
+				}
+				this.cxt.arc(x,y,r,0,Math.PI*2);
+				this.cxt.fill();
+			}
+			this.cxt.restore();
+			return this;
+		}
+		//添加绘制时针方法
+		Clock.prototype.drawHours = function(h) {
+			var angle = Math.PI / 6*h ;
+			this.cxt.save();
+			this.cxt.lineWidth = 4;
+			this.cxt.lineCap = 'round';
+			this.cxt.translate(this.W/2,this.H/2);
+			this.cxt.rotate(angle);
+			this.cxt.beginPath();
+			this.cxt.moveTo(0,20);
+			this.cxt.lineTo(0,-(this.R -40));
+			this.cxt.stroke();
+			this.cxt.restore();
+			return this;
+		}
+		//添加绘制分针方法
+		Clock.prototype.drawMins = function(m) {
+			var angle = Math.PI*2/60*m;
+			this.cxt.save();
+			this.cxt.lineWidth = 3;
+			this.cxt.lineCap = 'round';
+			this.cxt.translate(this.W/2,this.H/2);
+			this.cxt.rotate(angle);
+			this.cxt.beginPath();
+			this.cxt.moveTo(0,20);
+			this.cxt.lineTo(0,-(this.R - 20));
+			this.cxt.stroke();
+			this.cxt.restore();
+			return this;
+		};
+		//添加绘制秒针方法
+		Clock.prototype.drawSecs = function(s) {
+			var angle = Math.PI*2/60*s;
+			this.cxt.save();
+			this.cxt.fillStyle = '#FC0043';
+			this.cxt.lineCap = 'round';
+			this.cxt.translate(this.W/2,this.H/2);
+			this.cxt.rotate(angle);
+			this.cxt.beginPath();
+			this.cxt.moveTo(-3,20);
+			this.cxt.lineTo(3,20);
+			this.cxt.lineTo(1,-(this.R - 10));
+			this.cxt.lineTo(-1,-(this.R - 10));
+			this.cxt.fill();
+			this.cxt.restore();
+			return this;
+		}
+		//添加绘制表轴方法
+		Clock.prototype.drawCircle = function() {
+			this.cxt.save();
+			this.cxt.fillStyle = '#3E00FF';
+			this.cxt.translate(this.W/2,this.H/2);
+			this.cxt.beginPath();
+			this.cxt.arc(0,0,10,0,2*Math.PI);
+			this.cxt.fill();
+			this.cxt.restore();
+			return this;
+		}
+
+		var c = new Clock({
+			canvas:document.getElementById('canvas') 
+		})
+		c.update()
+
+
+
+
+	</script>
+</html>

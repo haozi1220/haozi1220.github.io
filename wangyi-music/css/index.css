@@ -1,0 +1,1026 @@
+body {
+	margin: 0;
+	font: 12px "宋体";
+	min-width: 982px;
+	padding-bottom: 20px;
+	background: #f5f5f5;
+}
+h2,h3,h4,li,dl,p{
+	margin: 0;
+}
+ul,
+ol,
+dl{
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+li{
+	vertical-align: top;
+}
+dt,
+dd{
+	margin: 0;
+}
+a{
+	margin:0;
+	text-decoration: none;
+}
+mark {
+	background: none;
+}
+strong {
+	font-weight: normal;
+}
+nav {
+	margin: 0;
+}
+img{
+	border: none;
+	vertical-align: top;
+}
+em{
+	font-style: normal;
+}
+i{
+	font-style: normal;
+}
+input{
+	border:1px solid #000;
+	padding: 0;
+	outline: none;
+}
+.logo a,
+.nav1 span,
+.nav1 li:hover,
+.nav1 li:visited,
+.nav1 em,
+.search,
+.xiala .sanjiao,
+.xiala .sanjiao1,
+.nav1 a:hover,
+.nav1 a:hover i,
+.nav1 a mark,
+.listSon,
+#sidebar,
+#sidebar .barSon:hover,
+#sidebar .barSon:hover em{
+	background: url(../img/topbar.png) no-repeat;
+}
+.clearFix {
+	zoom: 1;
+}
+.clearFix:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+.header{
+	height: 72px;
+	background: url(../img/bg20.png) repeat-x;
+	background-position: 0 0;
+	position: relative;
+	z-index: 1;
+}
+.div1{
+	position: relative;
+	width: 982px;
+	margin: 0 auto;
+}
+.logo{
+	float: left;
+	width: 162px;
+	padding:0 17px 10px 0;
+}
+.logo a{
+	overflow: hidden;
+	display:inline-block;
+	width: 162px;
+	height: 0;
+	padding-top: 42px;
+	background-position: 0 0;
+}
+.nav1 li{
+	float: left;
+	margin-left: -1px;
+}
+.nav1 a{
+	display:block;
+	height: 70px;
+	position:relative; 
+	font:14px/70px "宋体";
+	color: #ccc;
+	padding-left:20px;
+}
+.nav1 a i{
+	display: block;
+	height: 70px;
+}
+.nav1 .a2 i{
+	padding-right: 30px;
+}
+.nav1 a mark{
+	padding-right: 20px;
+	color: #ccc;
+	background-repeat:no-repeat right 28px;
+	background-position: right -332px;
+}
+.nav1 a:hover{
+	background-position:-1px -470px;
+	background-repeat: repeat-x;
+}
+.nav1 a:hover i{
+	background-position: right -470px;
+}
+.nav1 a:hover mark{
+	background:none;
+}
+.nav1 a:active{
+	background-position:0 -155px;
+}
+.nav1 a:active i{
+	background-position:right -155px;
+}
+.nav1 em{
+	display:none;
+	position: absolute;
+	left: 50%;
+	top: 63px;
+	margin-left:-7px; 
+	width: 15px;
+	height:10px;
+	background-position: -226px 0;
+}
+.nav1 li:active em{
+	display: block;
+}
+.nav1 span{
+	position: absolute;
+	left: 91px;
+	top:23px;
+	width: 26px;
+	height: 19px;
+	background-position:  -191px 0;
+}
+.nav1 .teshu{
+	background: url(../img/topbar.png) repeat-x;
+	background-position: 0 -155px;
+}
+.nav1 .teshu i{
+	background: url(../img/topbar.png) no-repeat;
+	background-position: right -155px;
+}
+.nav1 .teshu em{
+	display: block;
+}
+.search{
+	float: right;
+	width: 210px;
+	height: 31px;
+	margin-top: 21px;
+	background-position: 0 -550px;
+}
+.parent{
+	display: block;
+	position: relative;
+	color: #9b9b9b;
+	margin:8px 0 0 33px;
+}
+input{
+	font:12px/1 "宋体";
+	color: #9b9b9b;
+	width: 170px;
+	background:none;
+	border: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.xiala{
+	width: 47px;
+	position: relative;
+	float: right;
+	margin: 31px 0 0 13px;
+}
+.xiala .denglu{
+	display: block;
+	font:12px "宋体";
+	color: #787878;
+}
+.xiala .sanjiao{
+	position:absolute;
+	top:2px;
+	right: 0;
+	width: 12px;
+	height: 7px;
+	background-position: -228px -418px;
+}
+.xiala:hover .sanjiao{
+	position:absolute;
+	top:6px;
+	right: 0;
+	background-position: -228px -380px;
+}
+.xiala .list{
+	position: absolute;
+	display: none;
+	top: 21px;
+	right: -20px;
+}
+.xiala:hover .list{
+	display: block;
+}
+.xiala .listi{
+	position: absolute;
+	top: -8px;
+	right: 43px;
+	width: 16px;
+	height: 9px;
+	background: url(../img/toplist.png) no-repeat -20px 0 ;
+}
+.listSon{
+	float: right;
+	padding-left: 18px;
+	background: #2a2a2a;
+}
+.listSon li {
+	position: relative;
+	float: left;
+	width: 130px;
+}
+.listSon li a {
+	display: block;
+	font: 12px/38px Arial,"宋体";
+	color: #ccc;
+	padding-left: 28px;
+}
+.listSon li i {
+	position: absolute;
+	left: 0;
+	top: 10px;
+	width: 18px;
+	height: 16px;
+	background: url(../img/toplist.png) no-repeat;
+}
+.listSon li .phone{
+	background-position: 0 0;
+}
+.listSon li .weixin{
+	background-position: -20px -21px;
+}
+.listSon li .qq{
+	background-position: -20px -40px;
+}
+.listSon li .sina{
+	background-position: 0 -21px;
+}
+.listSon li .wangyi{
+	background-position: 0 -40px;
+}
+.listSon li:hover{
+	background-position: 0 -80px;
+}
+#sidebar{
+	height: 34px;
+	background-position: 0 -230px; 
+	background-repeat: repeat-x;
+	margin-top: -1px;
+}
+#sidebar .bar{
+	width: 797px;
+	margin: 0 auto;
+	padding-left: 184px;
+}
+#sidebar .barSon{
+	float: left;
+	color: #fff;
+	line-height: 22px;
+	margin: 7px 15px 0;
+	padding-left: 13px;
+}
+#sidebar .barSon em{
+	display: block;
+	height: 25px;
+	padding-right: 14px;
+	
+}
+#sidebar .barSon:hover{
+	background-position: 0 -275px;
+}
+#sidebar .barSon:hover em{
+	background-position:right -275px; 
+}
+#banner{
+	position: relative;
+	height: 336px;
+	background:url(../img/bg20.png) repeat-x;
+	background-position: 0 -101px;
+	text-align: center;
+}
+.bannerL{
+	position: absolute;
+	left: 0;
+	top: 0;
+	background:url(../img/bg20.png) repeat-x;
+	background-position: 0 -101px;
+	width: 50%;
+}
+.bannerR{
+	position: absolute;
+	top: 0;
+	right: 0;
+	background:url(../img/bg20.png) repeat-x;
+	background-position: 0 -101px;
+}
+.bannerBg{
+	position: relative;
+	width: 982px;
+	margin: 0 auto;
+}
+.bannerBgL{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 336px;
+	width: 730px;
+}
+.client,
+.dowBt{
+	background: url(../img/download.png) no-repeat;
+}
+.client{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 254px;
+	height: 336px;
+	background-position: 0 0;
+}
+.dowBt{
+	position: absolute;
+	left: 19px;
+	bottom: 68px;
+	width: 215px;
+	height: 56px;
+	background-position: 0 -340px;
+}
+.text{
+	display: block;
+	position: absolute;
+	left: 17px;
+	bottom: 32px;
+	font: 12px/36px Arial,"宋体";
+	color: #8d8d8d;
+}
+.btnL a,
+.btnR a{
+	background: url(../img/banner.png) no-repeat;
+}
+.btnL{
+	position: absolute;
+	left: -58px;
+	top: 0px;
+	height: 336px;
+	width: 39px;
+}
+.btnR{
+	position: absolute;
+	right: -58px;
+	top: 0px;
+	height: 336px;
+	width: 39px;
+}
+.btnL a,.btnR a{
+	position: absolute;
+	left: 0;
+	top: 136px;
+	width: 39px;
+	height: 64px;
+}
+.btnL a{
+	background-position: 0 -360px;
+}
+.btnR a {
+	background-position: 0 -508px;
+}
+.btnL a:hover{
+	background-position: 0 -430px;
+}
+.btnR a:hover{
+	background-position: 0 -578px;
+}
+#listBox{
+	overflow: hidden;
+	width: 982px;
+	margin: 0 auto;
+	border-right: 1px solid #d3d3d3;
+	background: #fff;
+}
+.listBoxL{
+	float: left;
+	border: 1px solid #d3d3d3;
+	border-top: none;
+	border-bottom: none;
+	width: 690px;
+	padding: 15px 20px 0 20px;
+}
+/*pulic css*/
+.listBoxL header{
+	position: relative;
+	border-bottom: 2px solid #c10d0c;
+	height: 38px;
+}
+.listBoxL h2{
+	float: left;
+	position: relative;
+	font: 20px/38px "宋体";
+	color: #333;
+	padding-left: 35px;
+}
+.listBoxL h2 strong,
+.listBoxL header .jiantou,
+.xindieSon .xindieList .add,
+.xindieSon em,
+.musicUkList .musicTop i{
+	background: url(../img/index.png) no-repeat;
+}
+.listBoxL h2 strong{
+	position: absolute;
+	left: 10px;
+	top: 13px;
+	width: 14px;
+	height: 14px;
+	background-position: -235px -164px;
+}
+.listBoxL header p {
+	position: relative;
+	float: right;
+	padding-right: 26px;
+	padding-top: 8px;
+}
+.listBoxL header .more{
+	line-height: 28px;
+	color: #666;
+}
+.listBoxL header .jiantou{
+	position: absolute;
+	top: 15px;
+	right: 10px;
+	width: 12px;
+	height: 12px;
+	background-position: 0 -240px;
+}
+.musicList .music .add,
+.musicList .music .play{
+	background: url(../img/iconall.png) no-repeat;
+}
+.musicList .music .shade,
+.xindieSon .xindieList .ico,
+.musicUkList .musicUkOdd{
+	background:url(../img/coverall.png) no-repeat;
+}
+.listBoxL a:hover {
+	text-decoration: underline;
+}
+/*end public css*/
+.listBoxL header .topnav{
+	float: left;
+	color: #d5ccd5;
+	padding: 2px 0 0 6px;
+}
+.listBoxL .topnav a {
+	line-height: 36px;
+	color: #666;
+	padding:0 10px 0 11px;
+}
+.listBoxL .musicList{
+	margin-right: -200px;
+}
+.listBoxL .musicList li {
+	position: relative;
+	float: left;
+	padding:20px 42px 27px 0;
+}
+.listBoxL .musicList .music{
+	position: relative;
+	display: block;
+}
+.listBoxL .musicList img{
+	width: 140px;
+	height: 140px;
+}
+.musicList .music .shade{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 141px;
+	height: 141px;
+	background-position: 0 0;
+}
+.musicList .music .ico{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 140px;
+	height: 27px;
+	background: #000;
+	filter: alpha(opacity=50);
+	opacity: .5;
+}
+.musicList .music .add{
+	position: absolute;
+	left: 10px;
+	bottom: 8px;
+	width: 14px;
+	height: 11px;
+	background-position: 0 -24px;
+}
+.musicList .music .msk{
+	position: absolute;
+	left: 35px;
+	bottom: 3px;
+	height: 17px;
+	line-height: 12px;
+	color:#ccc;
+}
+.musicList .music .play{
+	position: absolute;
+	left: 114px;
+	bottom: 6px;
+	width: 16px;
+	height: 17px;
+	background-position: 0 0;
+}
+.musicList .music .play:hover{
+	background-position: 0 -60px;
+}
+.musicList p{
+	padding-top: 8px;
+	width: 140px;
+	text-align:left; 
+}
+.musicList p .songTitle{
+	font: 14px/19px "宋体";
+	color: #000;
+}
+#ad{
+	padding: 24px 0 30px;
+}
+#ad img{
+	display: block;
+	width: 689px;
+	height: 75px;
+}
+.xindie{
+	padding-bottom: 32px;
+}
+.xindieSon{
+	position: relative;
+	margin-top: 20px;
+	padding:1px;
+	width: 685px;
+	border: 1px solid #d3d3d3;
+}
+.xindieSon .xindieList{
+	background: #f5f5f5;
+	padding-left:27px;
+	padding-bottom: 13px; 
+}
+.xindieSon .xindieList li{
+	float: left;
+	padding-top:28px;
+	padding-right: 29px;
+}
+.xindieSon .music{
+	position: relative;
+	display: block;
+}
+.xindieSon .xindieList img{
+	display: block;
+	width: 100px;
+	height: 100px;
+}
+.xindieSon .xindieList .ico{
+	position: absolute;
+	left: 0;
+	top: -2px;
+	width: 117px;
+	height: 101px;
+	background-position: 0 -568px;
+}
+.xindieSon .xindieList .add{
+	position: absolute;
+	left: 0;
+	bottom: -18px;
+	width: 106px;
+	height: 18px;
+	background-position: -260px 0;
+}
+.xindieList p{
+	position: relative;
+	padding-top: 7px;
+	text-align: left;
+	width: 100px;
+	z-index: 3;
+}
+.xindieList p .songTitle{
+	display: block;
+	line-height: 18px;
+	color: #000;
+}
+.xindieList p .songer{
+	display: block;
+	line-height: 18px;
+	color: #7c6666;
+}
+.xindieSon em{
+	display: block;
+	width: 7px;
+	height: 13px;
+}
+.xindieSon .xindieSonBtL{
+	position: absolute;
+	left: 8px;
+	top: 72px;
+	background-position: -265px -77px;
+}
+.xindieSon .xindieSonBtL:hover{
+	background-position: -285px -77px;
+}
+.xindieSon .xindieSonBtR{
+	position: absolute;
+	right: 11px;
+	top: 72px;
+	background-position: -306px -77px;
+}
+.xindieSon .xindieSonBtR:hover{
+	background-position: -326px -77px;
+}
+#musicUk ul {
+	padding-top: 18px;
+	padding-bottom: 42px;
+}
+#musicUk .musicUkList{
+	width: 227px;
+	border: 1px solid #d3d3d3;
+	padding:1px;
+	background:#f4f4f4;
+}
+.musicUkList .musicTop{
+	position: relative;
+	padding-bottom: 4px;
+}
+.musicUkList .musicTop img{
+	display: block;
+	float: left;
+	width: 80px;
+	height: 80px;
+	padding:18px 10px 18px 20px;
+}
+.musicUkList .musicTop i{
+	position: absolute;
+	left:20px;
+	bottom: 4px;
+	width: 80px;
+	height: 18px;
+	background-position: -260px 0;
+}
+.musicUkList .musicTop .header1{
+	float: left;
+	position: relative;
+	padding-top: 18px;
+}
+.musicTop .header1 h3{
+	float: left;
+	font:bold 14px/28px "宋体";
+	color: #333;
+}
+.musicUkList .musicTop .playBt,
+.musicUkList .musicTop .fav{
+	display: block;
+	width: 22px;
+	height: 22px;
+	background: url(../img/index.png) no-repeat;
+}
+.musicUkList .musicTop .playBt:hover,
+.musicUkList .musicTop .fav:hover,
+.musicUkList .playBt1,
+.musicUkList .fav1,
+.musicUkList .playBt1:hover,
+.musicUkList .fav1:hover{
+	background: url(../img/index.png) no-repeat;
+}
+.musicUkList .musicTop .playBt{
+	position: absolute;
+	left: 0;
+	top:50px;
+	background-position: -267px -205px;
+}
+.musicUkList .musicTop .playBt:hover{
+	background-position: -267px -235px;
+}
+.musicUkList .musicTop .fav{
+	position: absolute;
+	left: 35px;
+	top:50px;
+	background-position: -300px -205px;
+}
+.musicUkList .musicTop .fav:hover{
+	background-position: -300px -235px;
+}
+.musicUkList li{
+	position: relative;
+}
+.musicUkList li mark{
+	position: absolute;
+	font-size: 16px;
+	left: -28px;
+	top: -1px;
+	color: #666;
+}
+.musicUkList li .text1{
+	color: #c10d0c;
+}
+#musicUk .musicUkLiT{
+	float: left;
+	width: 228px;
+}
+.musicUkList .musicUkOdd,
+.musicUkList .musicUkEven{
+	height: 32px;
+	line-height: 27px;
+	text-indent: 49px;
+}
+.musicUkList .musicUkOdd{
+	background:#e8e8e8;
+}
+.musicUkList .songName{
+	color: #000;
+	display: block;
+}
+.musicUkList .all{
+	float: right;
+	color: #000;
+	padding-right:29px;
+}
+.musicUkList .playBt1{
+	position: absolute;
+	display: none;
+	right:70px;
+	top: 7px;
+	width: 17px;
+	height: 17px;
+	background-position: -267px -268px;
+}
+.musicUkList .playBt1:hover{
+	background-position: -267px -288px;
+}
+.musicUkList .fav1{
+	position: absolute;
+	display: none;
+	right: 14px;
+	top: 7px;
+	width: 17px;
+	height: 17px;
+	background-position: -297px -268px;
+}
+.musicUkList .fav1:hover{
+	background-position: -297px -288px;
+}
+.musicUkList .add{
+	position: absolute;
+	display: none;
+	right: 40px;
+	top: 7px;
+	width: 17px;
+	height: 17px;
+	background: url(../img/icon.png) no-repeat;
+	background-position: 0 -700px;
+}
+.musicUkList .add:hover{
+	background: url(../img/icon.png) no-repeat;
+	background-position: -22px -700px;
+}
+.musicUkList li:hover .playBt1,
+.musicUkList li:hover .fav1,
+.musicUkList li:hover .add{
+	display: block;
+}
+.musicUkList li:hover .songName{
+	max-width: 100px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+#listBoxR{
+	float: right;
+	width: 250px;
+}
+#listBoxR .listBoxRTop{
+	position: relative;
+	width: 250px;
+	height: 126px;
+	background: url(../img/index.png) no-repeat;
+	background-position: 0 0;
+}
+#listBoxR .listBoxRTop p{
+	line-height: 22px;
+	color: #666;
+	padding:16px 23px 21px;
+}
+#listBoxR .listBoxRTop a{
+	position: absolute;
+	left: 74px;
+	bottom:18px;
+	width: 48px;
+	height: 31px;
+	font: 12px/30px "宋体";
+	color: #fff;
+	padding: 1px 26px 0;
+	background: url(../img/index.png) no-repeat;
+	background-position: 0px -195px;
+}
+#listBoxR .listBoxRTop a:hover{
+	background: url(../img/index.png) no-repeat;
+	background-position: -110px -195px;
+}
+#listBoxR .listBoxRBot{
+	padding: 8px 20px 0;
+}
+#listBoxR .listBoxRBot .inHeader{
+	border-bottom: 1px solid #ccc;
+}
+#listBoxR .listBoxRBot h4{
+	float: left;
+	line-height: 30px;
+	color: #3f3f3f;
+}
+#listBoxR .listBoxRBot .viewMore{
+	float: right;
+	line-height: 30px;
+	color: #666;
+}
+.listBoxRBot .singerList{
+	padding-top: 20px;
+}
+.listBoxRBot .singerList li{
+	padding-bottom: 14px;
+}
+.listBoxRBot .singerList .link{
+	display: block;
+	overflow: hidden;
+}
+.listBoxRBot .singerList img{
+	display: block;
+	float: left;
+}
+.listBoxRBot .singerList strong{
+	display: block;
+	float: left;
+	padding-left: 14px;
+	padding-bottom: 6px;
+	width: 132px;
+	border: 1px solid #e9e9e9;
+	border-left: none;
+	background: url(../img/bg20.png) repeat-x;
+	background-position: 0 -455px;
+}
+.singerList .link:hover strong{
+	background: url(../img/bg14.png) repeat-x;
+}
+.listBoxRBot .singerList .name{
+	display: block;
+	font:bold 14px/32px "宋体";
+	color: #333;
+}
+.listBoxRBot .singerList .intro{
+	line-height: 22px;
+	color: #666;
+}
+.inSinger .inBottom {
+	padding-bottom: 23px;
+}
+.inSinger .inBottom a{
+	display: block;
+	overflow: hidden;
+	width: 211px;
+	height: 0;
+	padding-top: 31px;
+	background:url(../img/index.png) no-repeat;
+	background-position: -178px -131px;
+}
+.inSinger .inBottom a:hover{
+	background-position: 0 -302px;
+}
+.inSinger .emceeDj{
+	padding-top: 20px;
+}
+.inSinger .emceeDj li{
+	padding-bottom:10px;
+}
+.inSinger .emceeDj .img{
+	display:block;
+	float: left;
+}
+.inSinger .emceeDj img{
+	width: 40px;
+	height: 40px;
+}
+.inSinger .emceeDj dl{
+	float: left;
+	padding-left: 10px;
+}
+.inSinger .emceeDj dt{
+	position: relative;
+	width: 39px;
+}
+.emceeDj dt i{
+	position: absolute;
+	right: 0 ;
+	top: 6px;
+	float: right;
+	width: 12px;
+	height: 12px;
+	background: url(../img/icon.png) no-repeat;
+	background-position: 0 0;
+}
+.inSinger .emceeDj .emceeNam{
+	line-height: 24px;
+	color: #000;
+}
+.inSinger .emceeDj .emceeIntro{
+	line-height: 14px;
+	color: #666;
+}
+.inSinger a:hover{
+	text-decoration: underline;
+}
+#footer{
+	border-top: 1px solid #d8d8d8;
+	height:125px;
+	background: url(../img/bg20.png) repeat-x;
+	background-position: 0 -528px;
+}
+#footer .footerNei{
+	width: 980px;
+	margin: 0 auto;
+	padding:29px 0 52px;
+}
+#footer .footerNei .recruitment{
+	float: left;
+	padding-left: 54px;
+	padding-right: 65px;
+	background: url(../img/bg0.png) no-repeat; 
+	background-position: 0 -49px;
+}
+#footer .planeNam{
+	line-height: 22px;
+	color: #666;
+}
+#footer .planeIntro{
+	line-height: 22px;
+	color: #999;
+}
+#footer .footerNei .misicRecruitment{
+	float: left;
+	padding-left: 54px;
+	background: url(../img/bg0.png) no-repeat;
+	background-position: left top;
+}
+#footer .botNav{
+	float: right;
+	color: #9b9b9b;
+	line-height: 22px;
+}
+#footer .botNav p{
+	height: 22px;
+}
+#footer .botNav .yijian{
+	float: right;
+	width: 49px;
+	padding-left: 22px;
+	background: url(../img/bg0.png) no-repeat;
+	background-position: left bottom;
+}
+#footer .botNav a{
+	color: #9b9b9b;
+}
+#footer a:hover{
+	text-decoration: underline;
+}
+#topBtn{
+	position: fixed;
+	right: 100px;
+	bottom: 235px;
+}
+#topBtn a{
+	display: block;
+	width: 48px;
+	height: 44px;
+	background: url(../img/bg0.png) no-repeat;
+	background-position: 0 -148px;
+}
+#topBtn a:hover{
+	background: url(../img/bg0.png) no-repeat;
+	background-position: 0 -101px;
+}

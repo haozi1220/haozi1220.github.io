@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script>
+		var scale=1;
+		if (window.devicePixelRatio) {
+			scale=scale/window.devicePixelRatio;
+		}
+		document.write('<meta name="viewport" content="initial-scale='+scale+',minimum-scale='+scale+',maximum-scale='+scale+',user-scalable=no"/>');
+	</script>
+	<script>
+		var html=document.getElementsByTagName('html')[0];
+		var screenW=html.getBoundingClientRect().width;
+		html.style.fontSize=screenW/18+"px";
+	</script>
+	<title>当当触屏版</title>
+	<script>
+		toSize ();
+		function toSize () {
+			var html = document.getElementsByTagName("html")[0];
+			var screenW = html.getBoundingClientRect().width; 
+			html.style.fontSize = screenW/18 + "px";
+		}
+		window.addEventListener(
+			"orientationchange",
+			function(){
+				//横竖屏切换之后，会执行这里边的代码
+				toSize ();
+			},
+			false
+		);
+		window.addEventListener(
+			"resize",
+			function(){
+				//横竖屏切换之后，会执行这里边的代码
+				toSize ();
+			},
+			false
+		);
+        /*
+            orientationchange与resize在不同浏览器下使用不同的事件。
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',(三目的形式)
+         */
+</script>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body>
+	<header id="search">
+		<div class="logo">
+			<a href="#">当当</a>
+		</div>
+		<div class="search_box">
+			<form class="search_form">
+				<input type="text" placeholder="不一样的卡梅拉" class="text">
+				<a href="#" class="submit"></a>
+			</form>
+		</div>
+		<div class="header_category">
+			<a href="#">
+				<em>分类</em>
+			</a>
+		</div>
+	</header>
+	<section id="wrapper">
+		<section class="banner"></section>
+		<nav class="top_nav clearFix">
+			<a href="#" class="fenlei">
+				<em>分类</em>
+			</a>
+			<a href="#" class="app">
+				<em>APP下载</em>
+			</a>
+			<a href="#" class="che">
+				<em>购物车</em>
+			</a>
+			<a href="#" class="dangdang">
+				<em>我的当当</em>
+			</a>
+			<a href="#" class="haoshu">
+				<em>好书榜</em>
+			</a>
+			<a href="#" class="tongshu">
+				<em>童书榜</em>
+			</a>
+			<a href="#" class="haiwai">
+				<em>海外购</em>
+			</a>
+			<a href="#" class="dianzishu">
+				<em>电子书</em>
+			</a>
+		</nav>
+		<section class="miaosha clearFix">
+			<header>秒杀</header>
+			<a href="#" class="feng">
+				<em>￥ 1.00</em>
+			</a>
+			<a href="#" class="shangyi">
+				<em>￥ 49.00</em>
+			</a>
+			<a href="#" class="duanku">
+				<em>￥ 79.00</em>
+			</a>
+		</section>
+		<ul id="list">
+			<li>
+				<h2>
+					<strong>童装童鞋会场</strong>
+					<span>更多</span>
+				</h2>
+				<div class="list_div">
+					<a href="#" class="list_div_left">
+						<img src="img/tongzhuang.png"/>
+					</a>
+					<a href="#" class="list_div_right1">
+						<img src="img/jian.png"/>
+					</a>
+					<a href="#" class="list_div_right2">
+						<img src="img/mian.png"/>
+					</a>
+				</div>
+			</li>
+			<li>
+				<h2>
+					<strong>童装童鞋会场</strong>
+					<span>更多</span>
+				</h2>
+				<div class="list_div">
+					<a href="#" class="list_div_left">
+						<img src="img/tongzhuang.png"/>
+					</a>
+					<a href="#" class="list_div_right1">
+						<img src="img/jian.png"/>
+					</a>
+					<a href="#" class="list_div_right2">
+						<img src="img/mian.png"/>
+					</a>
+				</div>
+			</li>
+			<li>
+				<h2>
+					<strong>童装童鞋会场</strong>
+					<span>更多</span>
+				</h2>
+				<div class="list_div">
+					<a href="#" class="list_div_left">
+						<img src="img/tongzhuang.png"/>
+					</a>
+					<a href="#" class="list_div_right1">
+						<img src="img/jian.png"/>
+					</a>
+					<a href="#" class="list_div_right2">
+						<img src="img/mian.png"/>
+					</a>
+				</div>
+			</li>
+		</ul>
+		<ul id="zhuti" class="clearFix">
+			<h2>主题馆</h2>
+			<li class="li1">
+				<a href="#">
+					<img src="img/tushu.png"/>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/tongshu.png"/>
+				</a>
+			</li>
+			<li class="li1">
+				<a href="#">
+					<img src="img/tushu.png"/>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/tongshu.png"/>
+				</a>
+			</li>
+			<li class="li1">
+				<a href="#">
+					<img src="img/tushu.png"/>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/tongshu.png"/>
+				</a>
+			</li>
+			<li class="li1">
+				<a href="#">
+					<img src="img/tushu.png"/>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/tongshu.png"/>
+				</a>
+			</li>
+			<li class="li1">
+				<a href="#">
+					<img src="img/tushu.png"/>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/tongshu.png"/>
+				</a>
+			</li>
+			<li class="li1">
+				<a href="#">
+					<img src="img/tushu.png"/>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="img/tongshu.png"/>
+				</a>
+			</li>
+		</ul>
+		<div class="ul">
+			<ul class="tuiguang_list clearFix">
+				<h2>推广商品</h2>
+				<li>
+					<a href="#">
+						<img src="img/tuiguang.png"/>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/tuiguang.png"/>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/tuiguang.png"/>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<footer id="footer">
+			<nav class="footer_nav clearFix">
+				<a href="#" class="login">登录</a>
+				<a href="#" class="register">注册</a>
+				<a href="#" class="top">TOP</a>
+			</nav>
+			<div class="footer_wrap">
+				<a href="#">提建议</a>
+				<a href="#">电脑版</a>
+				<a href="#">触屏版</a>
+				<a href="#">帮 助</a>
+			</div>
+			<p class="copyRight">Copyright 当当 2016m.dangdang.com</p>
+		</footer>
+	</section>
+
+</body>
+</html>

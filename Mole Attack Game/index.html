@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>打地鼠小游戏</title>
+	<style type="text/css">
+		.wrap{
+			position: relative;
+			width: 880px;
+			height: 510px;
+			margin: 40px auto;
+			overflow: hidden;
+		}
+		p{
+			margin: 0;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100px;
+		}
+		input{
+			display: block;
+			width: 93px;
+			margin-bottom: 20px;
+		}
+		#list{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			position: absolute;
+			top: 0;
+			right: 0;
+			border: 3px solid #86980D;
+			height: 500px;
+			width: 770px;
+			background: url(img/listbg.jpg) no-repeat center center;
+		}
+		i{
+			position: absolute;
+			left: 0;
+			top: -55px;
+			width: 50px;
+			height: 50px;
+			border-radius: 25px;
+			font: 40px/50px "微软雅黑";
+			color: #74F604;
+			text-align: center;
+		}
+		#fraction { 
+			width:71px; 
+			height: 65px;
+			border:1px solid #066; 
+			position:relative; 
+			top:27px; 
+			left:0px; 
+			background:#FFC; 
+			padding:10px; 
+		}
+		#fraction p { 
+			display: block;
+			height: 30px;
+			margin:0; 
+			font-family:"微软雅黑"; 
+			font-size:16px; 
+			line-height:30px; 
+		}
+		.p2{
+			position: absolute;
+			left: 0;
+			top: 40px;
+		}
+		.click{
+			background: #BFFC0B;
+		}
+		.active{
+			background: red;
+		}
+	</style>
+</head>
+<body>
+<section class="wrap">
+	<p>
+		<input type="button" id="start" value="开始" />
+	</p>
+	<div id="fraction">
+	  	<p class="p1">得分：0 分</p>
+	  	<p class="p2">失分：0 分</p>
+	</div>
+	<div id="list">
+		<i id="running"></i>
+	</div>
+</section>
+</body>
+</html>
+<script src="tools.js"></script>
+<script src="MTween3.js"></script>
+<script type="text/javascript">
+	var list=$('#list');
+	var str="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	var runLi=$("#running");//获取i
+	var start=$('#start');
+	var winNum=0;			//得分
+	var loseNum=0;			//失分
+	var t=5000;
+	var totalWinNum = 50;	//得分总分
+	var totalLoseNum = 10;	//失分总分
+
+	var allP = $("p",$("#fraction"));
+
+	//总得分或者总失分达到总数时，弹出提醒，并把各项重置函数
+	function init(){
+		winNum = 0;
+		loseNum = 0;
+		allP[0].innerHTML = '得分：'+0+' 分';
+		allP[1].innerHTML = '失分：'+0+' 分';
+		start.disabled = false;
+		runLi.style.top = -50+"px";	
+	}
+	//运动函数
+	function fn(){
+		runLi.style.background="url(img/mouse1.jpg) no-repeat center center"
+		runLi.style.top=-50+"px";
+		//随机产生一个left值l
+		var l=Math.round(Math.random()*720);
+		//运动的li的left值为l
+		runLi.style.left=l+"px";
+		//随机产生一个数，从arr数组中随机产生一个字母作为i的内容
+		var n=Math.round(Math.random()*25);
+		console.log(n)
+		runLi.innerHTML=str[n];	
+		//引入MTween加运动效果
+		t-=100;
+		if(t<100){
+			t=100;
+		}
+		MTween(runLi,{top:500},t,"linear",function (){
+			//执行了这个回调函数，说明没点到
+			shake( list,"top",30,function (){
+				loseNum++;	//每走到底部一次，失分总分就+1
+				allP[1].innerHTML = '失分：'+loseNum+' 分';
+				//当失分总分达到规定值时
+				if( loseNum >= totalLoseNum ){
+					alert("Game Over!");
+					init();
+				}else{
+					h=fn();		//把fn的返回值赋给h
+				}
+			})
+		});
+		return n;			
+	}
+	//点击开始
+	var h=null;
+	start.onclick=function(){
+		this.disabled=true;
+		h=fn();		//把fn的返回值赋给h
+	}
+	//定义一个空对象，用来存放所按过的按键的keyCode值
+	var obj={};
+	document.onkeydown=function(ev){
+		//设置定时器，随时对比所产生的字母值
+		for(var i=0;i<str.length;i++){			//循环字符串
+			if(ev.keyCode===str.charCodeAt(h)){//判断随机产生的十进制数是否等于按键的十进制值
+				clearInterval(runLi.timer);
+				runLi.style.background="url(img/bad1.jpg) no-repeat center center";
+				runLi.innerHTML="";
+				shake(runLi,"left",20,function(){ //抖动函数
+					winNum++;
+					allP[0].innerHTML = '得分：'+winNum+' 分';
+					//当总分达到规定值时
+					if( winNum >= totalWinNum ){
+						alert("您赢了");
+						init();
+					}else{
+						h=fn();		//把fn的返回值赋给h
+					}		
+				})
+				break ;
+			}
+		}		
+	}
+	/*
+		问题：1.怎么让产生的keyCode与i的内容对接？
+			解决办法：定义个字符串，把26个字母组成一个字符串，用字符串的charCodeAt()方法与键盘的keyCode值对比
+	
+			疑问：如果用数组怎么得到对应字母的十进制数
+
+			2.没调用一次fn函数，n值都不同，怎样让n可以在不同作用域内起作用？
+				解决办法：让fn函数返回n的值，定义公共变量h，使h=fn();来存储n的值，以此达到n在不同作用域内使用。
+	 */
+</script>
