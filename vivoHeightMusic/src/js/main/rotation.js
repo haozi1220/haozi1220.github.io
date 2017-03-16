@@ -17,7 +17,7 @@ define(function (require,exports,module){
 	    isTouch = !1,
 	   	touches = !1,
     	touchLast = !1;
-	$('body').append('<p></p>');
+/*	$('body').append('<p></p>');
 	        	    	$('p').css({
 	        	    		'position':'absolute',
 	        	    		'z-index':10000,
@@ -27,7 +27,7 @@ define(function (require,exports,module){
 	        	    	});
         	
 		        	       
-	
+	*/
 	var o = new Orienter();
 	function touchMove(){
 	    //决定wrap1方向z，位移距离，选择角速度，并且规定大于多少才能出现位移，不能和拖动起冲突
