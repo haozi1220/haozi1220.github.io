@@ -6,8 +6,8 @@
  */
 (function(){
 	$("document").ready(function(){
-		$('.nav1').load("./nav.html");
-		$(".footer1").load("./footer.html");
+		$('.nav1').load("/nav.html");
+		$(".footer1").load("/footer.html");
 		/*顶部轮播图*/
 		var len = $(".banner_list li").size();
 		var bodyWidth = $("body").outerWidth(true);
@@ -24,7 +24,6 @@
 				left: -n*liWidth
 			},1000, function() {
 				if(n===len-1){
-					console.log(n)
 					n=0;
 					$(".banner_list").css({
 						left: -n*liWidth
