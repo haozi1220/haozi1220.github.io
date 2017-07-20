@@ -6,8 +6,8 @@
  */
 (function(){
 	$("document").ready(function(){
-		$('.nav1').load("..nav.html");
-		$(".footer1").load("..footer.html");
+		$('.nav1').load("/nav.html");
+		$(".footer1").load("/footer.html");
 		/*顶部轮播图*/
 		var len = $(".banner_list li").size();
 		var bodyWidth = $("body").outerWidth(true);
